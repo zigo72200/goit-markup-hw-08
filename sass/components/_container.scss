@@ -1,0 +1,15 @@
+.container {
+  width: var(--wigth-pege);
+  padding: 0 var(--lateral-padding);
+  margin: 0px auto;
+}
+
+.flex-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-list__item:not(:last-child) {
+  margin-right: 30px;
+}

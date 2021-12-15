@@ -1,7 +1,9 @@
 .container {
-  width: var(--wigth-pege);
-  padding: 0 var(--lateral-padding);
-  margin: 0px auto;
+  padding: 0 15px;
+  margin: 0 auto;
+  @media screen and (min-width: 479px) {
+
+  }
 }
 
 .flex-list {

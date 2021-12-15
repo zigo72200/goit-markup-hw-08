@@ -29,6 +29,21 @@ ul {
   margin: 0;
 }
 
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.flex-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
 :root {
   --color-page: #757575;
   --title-color: #212121;

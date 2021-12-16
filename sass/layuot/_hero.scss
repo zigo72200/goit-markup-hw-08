@@ -2,9 +2,10 @@
   display: block;
   background-color: var(--color-second);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/bacgraund.jpg);
+    url('../images/header-bacgraund.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -17,12 +18,19 @@
 
 .hero__title {
   font-weight: 900;
-  font-size: 26px;
+  font-size: 21px;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 30px;
-
   color: var(--whitу-color);
+
+  @media screen and (min-width: 480px) {
+    font-size: 26px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }

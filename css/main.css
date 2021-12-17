@@ -170,11 +170,25 @@ ul {
 .preference-list {
   padding-top: 60px;
   padding-bottom: 60px;
-  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .preference-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .preference-list__item {
   max-width: 450px;
+}
+
+@media screen and (min-width: 768px) {
+  .preference-list__item {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
 }
 
 @media screen and (max-width: 768px) {

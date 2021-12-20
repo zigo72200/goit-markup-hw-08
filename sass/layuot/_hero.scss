@@ -26,10 +26,10 @@
   margin-bottom: 30px;
   color: var(--whitу-color);
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: $first-shift) {
     font-size: 26px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $third-shift) {
     font-size: 44px;
     line-height: 1.36;
   }

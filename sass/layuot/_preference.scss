@@ -1,9 +1,8 @@
 .preference-list {
   padding-top: 60px;
   padding-bottom: 60px;
-  
-  
-  @media screen and (min-width: 768px) {
+
+  @media screen and (min-width: $second-shift) {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
@@ -12,13 +11,15 @@
 
 .preference-list__item {
   max-width: 450px;
-  @media screen and (min-width: 768px) {
-    width: calc((100% - 2 * 30px) / 2 );
+  @media screen and (min-width: $second-shift) {
+    width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
-  
+  @media screen and (min-width: $third-shift) {
+    width: calc((100% - 4 * 30px) / 4);
+  }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $second-shift) {
   .preference-list__item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -41,7 +42,7 @@
   text-align: center;
   @extend %text-first;
   text-transform: uppercase;
-  color: var(--title-color);
+  color: map-get($map: $colors, $key: 'title');
 }
 
 .preference-list__text {

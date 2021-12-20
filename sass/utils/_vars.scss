@@ -14,3 +14,22 @@
   --color-taxt-footer: rgba(255, 255, 255, 0.6);
   --color-logo-header: #000;
 }
+
+$first-shift: 480px;
+$second-shift: 768px;
+$third-shift: 1200px;
+
+$colors: (
+  'page': #757575,
+  'title': #212121,
+  'bak-make': rgba(47, 48, 58, 0.8),
+  'whitу': #ffffff,
+  'whity-back': #f5f4fa,
+  'second': #2f303a,
+  'footer': rgba(255, 255, 255, 0.6),
+  'accent': #2196f3,
+  'but': #188ce8,
+  'icon-fill': #afb1b8,
+  'taxt-footer': rgba(255, 255, 255, 0.6),
+  'logo-header': #000,
+);

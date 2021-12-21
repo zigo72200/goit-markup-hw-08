@@ -1,54 +1,65 @@
-// .header-sectios,
-// .header-nav__list,
-// .contacts-list,
-// .header-nav {
-//   display: flex;
-//   align-items: center;
-// }
+.header-sectios,
+.header-nav__list,
+.contacts-list,
+.header-nav {
+  @media screen and (min-width: $second-shift) {
+    display: flex;
+    align-items: center;
+  }
+}
 
 .header-sectios {
   border-bottom: 1px solid #ececec;
 }
-
-.contacts-list {
+.header__btn {
   margin-left: auto;
-  &__item:not(:first-child) {
-    margin-left: 30px;
-  }
+  background-color: map-get($colors, 'whitу');
+  border: none;
 }
-
-.contacts-list__item:not(:first-child) {
-  margin-left: 30px;
-}
-
 .logo--black {
   color: var(--color-logo-header);
 }
-
 .header-nav__item:not(:first-child) {
-  margin-left: 50px;
+  @media screen and (max-width: $second-shift) {
+    margin-top: 32px;
+  }
+  @media screen and (min-width: $second-shift) {
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width: $second-shift) {
+  .contacts-list {
+    margin-left: auto;
+    &__item:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
 }
 
-.line {
-  position: relative;
-  &::after {
-    position: absolute;
-    bottom: 0;
+@media screen and (min-width: $second-shift) {
+  .line {
+    position: relative;
+    &::after {
+      position: absolute;
+      bottom: 0;
 
-    display: block;
-    content: '';
-    height: 4px;
-    width: 100%;
-    border-radius: 2px;
+      display: block;
+      content: '';
+      height: 4px;
+      width: 100%;
+      border-radius: 2px;
 
-    background-color: var(--accent);
+      background-color: var(--accent);
+    }
   }
 }
 
 .header-nav__link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  @media screen and (min-width: $second-shift) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
   color: var(--title-color);
   text-decoration: none;
@@ -72,6 +83,27 @@
 }
 
 .contacts-list__icon {
+  @media screen and (max-width: $second-shift) {
+    display: none;
+  }
   margin-right: 10px;
   fill: currentColor;
+}
+
+.mobil-menu__list {
+  display: flex;
+}
+
+.mobil-menu_link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: map-get($colors, 'accent');
+}
+
+.mobil-menu_link {
+  padding-right: 10px;
+  margin-left: 10px;
+  border-right: 2px solid rgba(33, 33, 33, 0.2);
 }

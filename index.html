@@ -20,12 +20,13 @@
         <header class="header">
                 <div class="header-sectios container">
                     <a href="./index.html" class="logo">Web<span class="logo--black">Studio</span></a>
-                    <button class="header__btn">
+                    <button class="header__btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
                         <svg width="40" height="40" >
-                            <use href="./images/symbol-defs.svg#icon-menu"></use>
+                            <use class="icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
+                            <use class="icon-close" href="./images/symbol-defs.svg#icon-close"></use>
                         </svg>
                     </button>
-                    <div class="mobil-menu">
+                    <div class="mobil-menu js-menu-container">
                         <nav class="header-nav">
                             <ul class="header-nav__list">
                                 <li class="header-nav__item ">

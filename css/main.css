@@ -669,6 +669,8 @@ ul {
 }
 
 .header-sectios {
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #ececec;
 }
 
@@ -768,7 +770,7 @@ ul {
 }
 
 .mobil-menu {
-  display: none;
+  transform: translateX(100%);
   position: absolute;
   top: 0;
   left: 0;
@@ -776,6 +778,11 @@ ul {
   width: 100vw;
   padding: 48px 40px;
   background-color: #ffffff;
+  transition: transform 250ms linear;
+}
+
+.mobil-menu.is-open {
+  transform: translateX(0);
 }
 
 .mobil-menu__box {

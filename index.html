@@ -39,24 +39,27 @@
                                 </li>
                             </ul>
                         </nav>
-                        <ul class="contacts-list">
-                            <li class="contacts-list__item"><a href="mailto:info@example.com" class="contacts-list__ling hovers">
-                                    <svg class="contacts-list__icon" width="16" height="12">
-                                        <use href="./images/symbol-defs.svg#icon-envelope"></use>
-                                    </svg>
-                                    info@example.com</a></li>
-                            <li class="contacts-list__item "><a href="tel:+380991111111" class="contacts-list__ling hovers">
-                                    <svg class="contacts-list__icon" width="10" height="16">
-                                        <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-                                    </svg>
-                                    +38 099 111 11 11</a></li>
-                        </ul>
-                        <ul class="mobil-menu__list">
-                            <li class="mobil-menu__item"><a class="mobil-menu_link" href="">Instagram</a></li>
-                            <li class="mobil-menu__item"><a class="mobil-menu_link" href="">Twitter</a></li>
-                            <li class="mobil-menu__item"><a class="mobil-menu_link" href="">Facebook</a></li>                            
-                            <li class="mobil-menu__item"><a class="mobil-menu_link" href="">LinkedIn</a></li>
-                        </ul>
+                        <div class="mobil-menu__box">
+                            <ul class="contacts-list">
+                                <li class="contacts-list__item "><a href="tel:+380991111111" class="contacts-list__ling hovers mobil-menu--number">
+                                        <svg class="contacts-list__icon" width="10" height="16">
+                                            <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                                        </svg>
+                                        +38 099 111 11 11</a></li>
+                                <li class="contacts-list__item"><a href="mailto:info@example.com" class="contacts-list__ling hovers">
+                                        <svg class="contacts-list__icon" width="16" height="12">
+                                            <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                                        </svg>
+                                        info@example.com</a></li>
+                            
+                            </ul>
+                            <ul class="mobil-menu__list">
+                                <li class="mobil-menu__item"><a class="mobil-menu_link mobil-menu_link--retreat" href="">Instagram</a></li>
+                                <li class="mobil-menu__item"><a class="mobil-menu_link" href="">Twitter</a></li>
+                                <li class="mobil-menu__item"><a class="mobil-menu_link" href="">Facebook</a></li>
+                                <li class="mobil-menu__item"><a class="mobil-menu_link mobil-menu_link--line" href="">LinkedIn</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
         </header>
@@ -432,5 +435,6 @@
             </div>
         </div>
         <script src="./js/modal.js"></script> -->
+        <script src="./js/mobile-menu.js"></script>
     </body>
     </html>

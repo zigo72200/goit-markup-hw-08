@@ -5,6 +5,7 @@
   @media screen and (min-width: $second-shift) {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 }
 
@@ -17,6 +18,23 @@
 .logo--black {
   color: var(--color-logo-header);
 }
+
+.mobil-menu {
+  @media screen and (min-width: $second-shift) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header-nav {
+  @media screen and (max-width: $second-shift) {
+    margin-bottom: auto;
+  }
+  @media screen and (min-width: $second-shift) {
+    margin-left: 88px;
+  }
+}
+
 .header-nav__item:not(:first-child) {
   @media screen and (max-width: $second-shift) {
     margin-top: 32px;
@@ -27,15 +45,19 @@
 }
 @media screen and (min-width: $second-shift) {
   .contacts-list {
-    margin-left: auto;
-    &__item:not(:first-child) {
-      margin-left: 30px;
+    display: block;
+    margin-left: 84px;
+    @media screen and (min-width: $third-shift) {
+      &__item:not(:first-child) {
+        margin-left: 30px;
+      }
     }
   }
 }
 .contacts-list {
-  margin-top: auto;
-  margin-bottom: 64px;
+  @media screen and (min-width: $third-shift) {
+    display: flex;
+  }
 }
 
 @media screen and (min-width: $second-shift) {
@@ -61,6 +83,8 @@
   @media screen and (min-width: $second-shift) {
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
   }
 
   color: var(--title-color);
@@ -96,80 +120,79 @@
   position: absolute;
   top: 10px;
   right: 15px;
-  z-index: 50;
   border: none;
 
   background-color: map-get($colors, 'whitу');
+  @media screen and (min-width: $second-shift) {
+    display: none;
+  }
 }
+@media screen and (max-width: $second-shift) {
+  .contacts-list {
+    margin-bottom: 64px;
+  }
+  .mobil-menu {
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 48px 40px;
+    background-color: map-get($colors, 'whitу');
+    transition: transform 250ms linear;
+  }
 
-.mobil-menu {
-  transform: translateX(100%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  padding: 48px 40px;
-  background-color: map-get($colors, 'whitу');
-  transition: transform 250ms linear;
-}
+  .mobil-menu.is-open {
+    transform: translateX(0);
+  }
 
-.mobil-menu.is-open {
-  transform: translateX(0);
-}
-// .icon-close {
-//   display: none;
-// }
+  .mobil-menu--number {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    margin-bottom: 32px;
+    @media screen and (min-width: $first-shift) {
+      font-size: 34px;
+    }
+  }
 
-// .mobil-menu.is-open .icon-close {
-//   display: block;
-// }
-// .mobil-menu.is-open .icon-menu {
-//   display: none;
-// }
+  .mobil-menu__list {
+    display: flex;
+  }
 
-.mobil-menu__box {
-  position: absolute;
-  bottom: 48px;
-}
+  .mobil-menu_link {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: map-get($colors, 'accent');
+    @media screen and (min-width: $first-shift) {
+      font-size: 18px;
+    }
+  }
 
-.mobil-menu--number {
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 1.18;
-  letter-spacing: 0.02em;
-  color: var(--accent);
-  margin-bottom: 32px;
-  @media screen and (min-width: $first-shift) {
-    font-size: 34px;
+  .mobil-menu_link {
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+
+  .mobil-menu_link--retreat {
+    padding-left: 0px;
+  }
+
+  .mobil-menu_link--line {
+    border-right: none;
   }
 }
 
-.mobil-menu__list {
-  display: flex;
-}
-
-.mobil-menu_link {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.22;
-  letter-spacing: 0.02em;
-  color: map-get($colors, 'accent');
-  @media screen and (min-width: $first-shift) {
-    font-size: 18px;
+@media screen and (min-width: $second-shift) {
+  .mobil-menu__list {
+    display: none;
   }
-}
-
-.mobil-menu_link {
-  padding-right: 10px;
-  padding-left: 10px;
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
-}
-
-.mobil-menu_link--retreat {
-  padding-left: 0px;
-}
-
-.mobil-menu_link--line {
-  border-right: none;
 }

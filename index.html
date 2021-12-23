@@ -20,13 +20,17 @@
         <header class="header">
                 <div class="header-sectios container">
                     <a href="./index.html" class="logo">Web<span class="logo--black">Studio</span></a>
-                    <button class="header__btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <button type="button" class="header__btn js-open-menu hovers" aria-expanded="false" aria-controls="mobile-menu">
                         <svg width="40" height="40" >
                             <use class="icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
-                            <use class="icon-close" href="./images/symbol-defs.svg#icon-close"></use>
                         </svg>
                     </button>
-                    <div class="mobil-menu js-menu-container">
+                    <div class="mobil-menu js-menu-container ">
+                        <button type="button" class="header__btn js-close-menu hovers" aria-expanded="false" aria-controls="mobile-menu">
+                            <svg width="40" height="40">
+                                <use class="icon-close" href="./images/symbol-defs.svg#icon-close"></use>
+                            </svg>
+                        </button>
                         <nav class="header-nav">
                             <ul class="header-nav__list">
                                 <li class="header-nav__item ">
@@ -40,7 +44,6 @@
                                 </li>
                             </ul>
                         </nav>
-                        <div class="mobil-menu__box">
                             <ul class="contacts-list">
                                 <li class="contacts-list__item "><a href="tel:+380991111111" class="contacts-list__ling hovers mobil-menu--number">
                                         <svg class="contacts-list__icon" width="10" height="16">
@@ -59,7 +62,7 @@
                                 <li class="mobil-menu__item"><a class="mobil-menu_link" href="">Twitter</a></li>
                                 <li class="mobil-menu__item"><a class="mobil-menu_link" href="">Facebook</a></li>
                                 <li class="mobil-menu__item"><a class="mobil-menu_link mobil-menu_link--line" href="">LinkedIn</a></li>
-                            </ul>
+                         
                         </div>
                     </div>
                 </div>
@@ -388,7 +391,7 @@
         </div>
     </footer>
  <!-- Модалка  is-hidden-->
-        <!-- <div data-modal class="backdrop is-hidden">
+        <div data-modal class="backdrop is-hidden">
             <div class="modal">
                 <button data-modal-close type="button" class="close-button">
                     <svg width="18" height="18">
@@ -435,7 +438,7 @@
                 </form>
             </div>
         </div>
-        <script src="./js/modal.js"></script> -->
+        <script src="./js/modal.js"></script>
         <script src="./js/mobile-menu.js"></script>
     </body>
     </html>

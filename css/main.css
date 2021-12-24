@@ -1136,6 +1136,10 @@ ul {
   overflow: hidden;
 }
 
+.card-product__img {
+  width: 100%;
+}
+
 .card-product__overlay {
   position: absolute;
   top: 0;

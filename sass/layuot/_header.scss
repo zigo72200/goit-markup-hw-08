@@ -47,6 +47,11 @@
   .contacts-list {
     display: block;
     margin-left: 84px;
+    @media screen and (min-width: $second-shift) and (max-width: $third-shift) {
+      &__item:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
     @media screen and (min-width: $third-shift) {
       &__item:not(:first-child) {
         margin-left: 30px;
@@ -134,8 +139,9 @@
   .mobil-menu {
     display: flex;
     flex-direction: column;
+    z-index: 15;
     transform: translateX(100%);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;

@@ -190,6 +190,7 @@ ul {
   position: absolute;
   max-width: 530px;
   min-height: 580px;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -353,12 +354,60 @@ ul {
 .hero {
   display: block;
   background-color: var(--color-second);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header-bacgraund.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bac480-400.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bac480-400@2x.jpg");
+  }
+}
+
+@media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bac480-400@3x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bac768-400.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bac768-400@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 3), screen and (min-width: 768px) and (min-resolution: 288dpi), screen and (min-width: 768px) and (min-resolution: 3dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bac768-400@3x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bac1600-600.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bac1600-600@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-resolution: 3dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bac1600-600@3x.jpg");
+  }
 }
 
 .hero__box {
@@ -462,6 +511,7 @@ ul {
 
 .services__img {
   display: block;
+  max-width: 370px;
   width: 100%;
   height: auto;
 }
@@ -891,6 +941,12 @@ ul {
   }
 }
 
+@media screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1200px) {
+  .contacts-list__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (min-width: 768px) and (min-width: 1200px) {
   .contacts-list__item:not(:first-child) {
     margin-left: 30px;
@@ -982,8 +1038,9 @@ ul {
   .mobil-menu {
     display: flex;
     flex-direction: column;
+    z-index: 15;
     transform: translateX(100%);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;

@@ -10,8 +10,11 @@
 }
 
 .header-sectios {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  @media screen and (max-width: $second-shift) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
   border-bottom: 1px solid #ececec;
 }
 
@@ -47,6 +50,7 @@
   .contacts-list {
     display: block;
     margin-left: 84px;
+
     @media screen and (min-width: $second-shift) and (max-width: $third-shift) {
       &__item:not(:last-child) {
         margin-bottom: 10px;
@@ -62,6 +66,7 @@
 .contacts-list {
   @media screen and (min-width: $third-shift) {
     display: flex;
+    margin-left: 340px;
   }
 }
 

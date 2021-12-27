@@ -11,7 +11,10 @@
 
 .modal {
   position: absolute;
-  max-width: 530px;
+  max-width: 450px;
+  @media screen and (min-width: $third-shift) {
+    max-width: 530px;
+  }
   min-height: 580px;
   width: 100%;
   top: 50%;

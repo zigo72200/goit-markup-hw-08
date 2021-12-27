@@ -1,11 +1,16 @@
 .preference-list {
-  padding-top: 60px;
-  padding-bottom: 60px;
-
   @media screen and (min-width: $second-shift) {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
+  }
+}
+.preference-box {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: $third-shift) {
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 }
 

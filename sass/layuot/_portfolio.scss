@@ -5,10 +5,18 @@
 // кнопки
 .list-buttom {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: left;
-  flex-wrap: wrap;
   margin: -8px;
+  margin-bottom: 40px;
+  justify-content: left;
+  @media screen and (min-width: $second-shift) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $third-shift) {
+    margin-bottom: 50px;
+  }
+  flex-wrap: wrap;
+
   &__item {
     margin: 8px;
   }
